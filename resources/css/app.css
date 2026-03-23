@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* VIP Redesign Variable Overrides */
+        --color-primary: #D4AF37; /* VIP Gold */
+        --color-primary-hover: #b5952f;
+        --color-secondary: #FFFFFF;
+        --color-secondary-hover: #f0f0f0;
+        --color-accent: #E5E4E2; /* Platinum */
+        
+        --color-bg-main: #050505; /* Deep True Black */
+        --color-bg-section: #0a0a0a;
+        --color-bg-card: #111111;
+        
+        --color-text-main: #FFFFFF;
+        --color-text-muted: #9ca3af;
+        --color-text-light: #050505; /* Inverted for gold buttons */
+        
+        --color-border: #1f2937;
+        
+        --shadow-hover: 0 20px 40px rgba(212, 175, 55, 0.15); /* Gold glow */
+    }
+}
+
+@layer utilities {
+    @keyframes gradientX {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    
+    .animate-gradient-x {
+        background-size: 200% 200%;
+        animation: gradientX 15s ease infinite;
+    }
+}
